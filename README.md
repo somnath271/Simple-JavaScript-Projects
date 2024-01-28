@@ -7,6 +7,7 @@ Welcome to the Simple JS Projects repository! This repository contains a collect
 Here's a brief overview of the projects included in this repository:
 
 1. **Prime Number Checker**: A simple web application to check whether a given number is prime or not. It includes HTML, CSS, and JavaScript files.
+2. **Scientific Calculator**: A simple web-based scientific calculator that performs basic arithmetic operations and scientific functions such as sine, cosine, tangent, and square root.
 
 ## Getting Started
 
