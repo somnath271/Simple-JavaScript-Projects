@@ -1,141 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Password Generator</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-
-        .container {
-            text-align: center;
-            padding: 20px;
-            background: linear-gradient(to bottom right, #64b5f6, #90caf9);
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            transition: all 0.3s ease;
-        }
-
-        .container:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-        }
-
-        h1 {
-            color: #333;
-        }
-
-        .password-container {
-            margin-top: 20px;
-        }
-
-        label {
-            display: inline-block;
-            margin-bottom: 5px;
-            color: #333;
-        }
-
-        input[type="number"], input[type="checkbox"] {
-            width: 20px;
-            height: 20px;
-            margin-right: 10px;
-            cursor: pointer;
-            vertical-align: middle;
-        }
-
-        button {
-            padding: 10px 20px;
-            font-size: 18px;
-            cursor: pointer;
-            background-color: #4CAF50;
-            border: none;
-            color: white;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-
-        button:hover {
-            background-color: #45a049;
-        }
-
-        #password {
-            width: 300px;
-            padding: 10px;
-            font-size: 18px;
-            margin-top: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-    </style>
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <div class="container">
-        <h1>Password Generator</h1>
-        <div class="password-container">
-            <label for="length">Password Length:</label>
-            <input type="number" id="length" min="1" value="12">
-        </div>
-        <div class="password-container">
-            <input type="checkbox" id="includeSmall" checked>
-            <label for="includeSmall">Include Small Letters (a-z)</label><br>
-            <input type="checkbox" id="includeCapital" checked>
-            <label for="includeCapital">Include Capital Letters (A-Z)</label><br>
-            <input type="checkbox" id="includeNumbers" checked>
-            <label for="includeNumbers">Include Numbers (0-9)</label><br>
-            <input type="checkbox" id="includeSpecial" checked>
-            <label for="includeSpecial">Include Special Characters (!@#$%^&*()_+{}[]<>)</label><br>
-            <button onclick="generatePassword()">Generate Password</button>
-        </div>
-        <div class="password-container">
-            <input type="text" id="password" readonly>
-        </div>
+      <h1>Password Generator</h1>
+      <div class="password-container">
+        <label for="length">Password Length:</label>
+        <input type="number" id="length" min="1" value="12" />
+      </div>
+      <div class="password-container">
+        <input type="checkbox" id="includeSmall" checked />
+        <label for="includeSmall">Include Small Letters (a-z)</label><br />
+        <input type="checkbox" id="includeCapital" checked />
+        <label for="includeCapital">Include Capital Letters (A-Z)</label><br />
+        <input type="checkbox" id="includeNumbers" checked />
+        <label for="includeNumbers">Include Numbers (0-9)</label><br />
+        <input type="checkbox" id="includeSpecial" checked />
+        <label for="includeSpecial"
+          >Include Special Characters (!@#$%^&*()_+{}[]<>)</label
+        ><br />
+        <button onclick="generatePassword()">Generate Password</button>
+      </div>
+      <div class="password-container">
+        <input type="text" id="password" readonly />
+      </div>
     </div>
 
-    <script>
-        function generatePassword() {
-            const length = document.getElementById("length").value; // Password length entered by the user
-            const includeSmall = document.getElementById("includeSmall").checked;
-            const includeCapital = document.getElementById("includeCapital").checked;
-            const includeNumbers = document.getElementById("includeNumbers").checked;
-            const includeSpecial = document.getElementById("includeSpecial").checked;
-
-            let charset = "";
-            let password = "";
-
-            if (includeSmall) {
-                charset += "abcdefghijklmnopqrstuvwxyz";
-            }
-            if (includeCapital) {
-                charset += "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-            }
-            if (includeNumbers) {
-                charset += "0123456789";
-            }
-            if (includeSpecial) {
-                charset += "!@#$%^&*()_+{}[]<>";
-            }
-
-            if (charset === "") {
-                alert("Please select at least one character set.");
-                return;
-            }
-
-            for (let i = 0; i < length; i++) {
-                const randomIndex = Math.floor(Math.random() * charset.length);
-                password += charset[randomIndex];
-            }
-
-            document.getElementById("password").value = password;
-        }
-    </script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
