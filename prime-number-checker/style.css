@@ -22,12 +22,33 @@ body {
   background-color: #f0f0f0;
 }
 
-#hello {
-  font-size: 24px;
-  font-weight: bold;
+h1 {
   color: #333;
+}
+
+p {
+  color: #555;
+}
+
+input[type="number"] {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
 }
 
 button {
   padding: 10px 20px;
- 
+  font-size: 18px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.1s;
+}
+
+button:hover {
+  background-color: #45a049;
+  transform: scale(1.1);
+}
