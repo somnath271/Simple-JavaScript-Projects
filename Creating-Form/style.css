@@ -1,0 +1,117 @@
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  #box {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    padding: 20px;
+  }
+  #box1 h1{
+    text-align: center;
+  }
+  #box2 {
+    display: flex;
+    /* text-align: center; */
+    flex-direction: column;
+    gap: 10px;
+
+  }
+  
+  .label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  
+  .input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .checkbox-container {
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+  
+  #checkbox {
+    margin-right: 5px;
+  }
+  
+  .submit-button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    /* padding: 10px; */
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+   margin-left: 130px;
+  }
+  
+  .submit-button:hover {
+    background-color: #45a049;
+  }
+  
+  a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-left: 80px;
+    margin-right: 70px;
+  }
+  
+  .signup-button,
+  .signin-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .signup-button:hover,
+  .signin-button:hover {
+    background-color: #0056b3;
+  }
+  
+  
+  .input {
+    width: 100%;
+    padding: 8px; /* Adjust padding */
+    border: none;
+    border-bottom: 1px solid #d80f0f; /* Use bottom border for input effect */
+    background: transparent; /*Transparent background */
+    margin-bottom: 10px; /* Add margin bottom for spacing */
+    font-size: 15px;
+  }
+  
+  .input:focus {
+    outline: none;
+    border-color: #007bff; /* Change border color on focus */
+  }

@@ -1,79 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Form</title>
-    <style>
-      .container {
-        width: 100%;
-        height: 100%;
-        min-height: 900px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: row;
-      }
-
-      #box {
-        border: solid red 3px;
-        width: 350px;
-        height: 450px;
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-      }
-      #box1{
-        text-align: center;
-      }
-      #box2 {
-        display: flex;
-        flex-direction: column;
-        gap: 9px;
-        position:relative;
-        left: 20px;
-      }
-      #label{
-        font-size: 20px;
-        font-weight: bold;
-      }
-      #fname,#lname, #pass{
-        width: 300px;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <div id="box">
-        <div id="box1">
-          <h1>Create your account</h1>
-        </div>
-        <form action="/action_page.php">
-              <div id="box2">
-            <label for="fname" id="label">First Name</label>
-            <input type="text" id="fname" placeholder="Enter your first name" />
-            <label for="fname" id="label">Last Name</label>
-            <input type="text" id="lname" placeholder="Enter your last name" />
-            <label for="fname" id="label">Password</label>
-            <input
-              type="password"
-              id="pass"
-              name="e"
-              placeholder="Enter your password"
-            />
-            <label for="fname" id="label">Confirm Password</label>
-            <input
-              type="password"
-              id="pass"
-              placeholder="Please confirm your password"
-            />
-            <span><input id="checkbox" type="checkbox"/>
-            <label for="checkbox">
-              I agree to these <a href="#">Terms and Conditions</a>.</label> </span>
-              <a href="#"><button>Submit</button></a>
-          </form>
-        </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div id="box">
+      <div id="box1">
+        <h1>Create your account</h1>
       </div>
+      <form action="/action_page.php">
+        <div id="box2">
+          <label for="fname" class="label">First Name</label>
+          <input type="text" id="fname" class="input" placeholder="Enter your first name" />
+          <label for="lname" class="label">Last Name</label>
+          <input type="text" id="lname" class="input" placeholder="Enter your last name" />
+          <label for="pass" class="label">Password</label>
+          <input type="password" id="pass" class="input" name="password" placeholder="Enter your password" />
+          <label for="confirm_pass" class="label">Confirm Password</label>
+          <input type="password" id="confirm_pass" class="input" placeholder="Please confirm your password" />
+          <div class="checkbox-container">
+            <input id="checkbox" type="checkbox" />
+            <label for="checkbox">
+              I agree to these <a href="#">Terms and Conditions</a>.
+            </label>
+          </div>
+          <button type="submit" class="submit-button">Submit</button>
+          <div class="button-container">
+            <button type="button" class="signup-button">Sign Up</button>
+            <button type="button" class="signin-button">Sign In</button>
+          </div>
+        </div>
+      </form>
     </div>
-  </body>
+  </div>
+</body>
 </html>
