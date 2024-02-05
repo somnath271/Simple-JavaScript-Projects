@@ -34,14 +34,24 @@ body {
     color: #333;
     margin-bottom: 5px;
   }
-  
+   
   .input {
     width: 100%;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+    padding: 8px;
+    border: none;
+    border-bottom: 1px solid #d80f0f; /* Use bottom border for input effect */
+    background: transparent; /*Transparent background */
+    margin-bottom: 10px; /* Add margin bottom for spacing */
+    font-size: 15px;
   }
   
+  .input:focus {
+    outline: none;
+    border-color: #1c1e1f; /* Change border color on focus according to your need */
+    background-color: #3c4c5d;
+    color: white;
+}
+
   .checkbox-container {
     margin-top: 10px;
     margin-bottom: 15px;
@@ -62,6 +72,7 @@ body {
     cursor: pointer;
     transition: background-color 0.3s ease;
    margin-left: 130px;
+   font-size: 15px;
   }
   
   .submit-button:hover {
@@ -93,6 +104,7 @@ body {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    font-size: 15px;
   }
   
   .signup-button:hover,
@@ -100,18 +112,3 @@ body {
     background-color: #0056b3;
   }
   
-  
-  .input {
-    width: 100%;
-    padding: 8px; /* Adjust padding */
-    border: none;
-    border-bottom: 1px solid #d80f0f; /* Use bottom border for input effect */
-    background: transparent; /*Transparent background */
-    margin-bottom: 10px; /* Add margin bottom for spacing */
-    font-size: 15px;
-  }
-  
-  .input:focus {
-    outline: none;
-    border-color: #007bff; /* Change border color on focus */
-  }
