@@ -12,16 +12,24 @@
       <div id="box1">
         <h1>Create your account</h1>
       </div>
-      <form action="/action_page.php">
+      <form action="/action_page.php" name="myform" method="post">
         <div id="box2">
           <label for="fname" class="label">First Name</label>
-          <input type="text" id="fname" class="input" placeholder="Enter your first name" />
+          <input type="text" id="fname" class="input" placeholder="Enter your first name" name="ffname"/>
+          <div class="error-message" id="fname-error"></div>
+          
           <label for="lname" class="label">Last Name</label>
-          <input type="text" id="lname" class="input" placeholder="Enter your last name" />
+          <input type="text" id="lname" class="input" placeholder="Enter your last name" name="lname"/>
+          <div class="error-message" id="lname-error"></div>
+          
           <label for="pass" class="label">Password</label>
           <input type="password" id="pass" class="input" name="password" placeholder="Enter your password" />
+          <div class="error-message" id="pass-error"></div>
+          
           <label for="confirm_pass" class="label">Confirm Password</label>
           <input type="password" id="confirm_pass" class="input" placeholder="Please confirm your password" />
+          <div class="error-message" id="confirm_pass-error"></div>
+          
           <div class="checkbox-container">
             <input id="checkbox" type="checkbox" />
             <label for="checkbox">
@@ -37,5 +45,20 @@
       </form>
     </div>
   </div>
+  <script>
+    const inputs = document.querySelectorAll('.input');
+
+    inputs.forEach(input => {
+      input.addEventListener('blur', function() {
+        const errorId = `${this.id}-error`;
+        const errorMessageElement = document.getElementById(errorId);
+        if (this.value.trim() === '') {
+          errorMessageElement.textContent = 'This field is required';
+        } else {
+          errorMessageElement.textContent = '';
+        }
+      });
+    });
+  </script>
 </body>
 </html>
