@@ -13,9 +13,14 @@ body {
 #box {
   background-color: #fff;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adding box shadow */
   width: 350px;
   padding: 20px;
+  transition: box-shadow 0.3s ease; /* Adding transition effect to box shadow */
+}
+
+#box:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increasing box shadow on hover */
 }
 
 #box1 {
@@ -97,4 +102,16 @@ body {
 .signup-button:hover,
 .signin-button:hover {
   background-color: #0056b3;
+}
+
+h1 {
+  background: linear-gradient(to right, #4caf50, #007bff); /* Gradient background for h1 */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; /* Transparent text */
+  transition: background 0.3s ease; /* Adding transition effect to background */
+}
+
+h1:hover {
+  background: linear-gradient(to right, #45a049, #0056b3); /* Gradient hover effect for h1 */
+  -webkit-text-fill-color: white; /* Fallback text color */
 }
